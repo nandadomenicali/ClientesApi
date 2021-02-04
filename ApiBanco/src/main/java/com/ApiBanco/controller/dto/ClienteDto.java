@@ -2,6 +2,7 @@ package com.ApiBanco.controller.dto;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Map;
 
 import com.ApiBanco.model.Cliente;
 
@@ -18,8 +19,10 @@ public class ClienteDto {
 	private String estado;
 	
 	public ClienteDto() {
-		// TODO Auto-generated constructor stub
+		super();// TODO Auto-generated constructor stub
 	}
+	
+	
 	
 	public ClienteDto(String nome, Long cpf, int agencia, int conta,  int cep, String logradouro, int numero, String cidade,
 			String estado) {
@@ -32,6 +35,18 @@ public class ClienteDto {
 		this.numero = numero;
 		this.cidade = cidade;
 		this.estado = estado;
+	}
+	
+	public ClienteDto(Cliente cadastro) {
+		this.nome = cadastro.getNome();
+		this.cpf = cadastro.getCpf();
+		this.agencia = cadastro.getAgencia();
+		this.conta = cadastro.getConta();
+		this.cep = cadastro.getCep();
+		this.logradouro = cadastro.getLogradouro();
+		this.numero = cadastro.getNumero();
+		this.cidade = cadastro.getCidade();
+		this.estado = cadastro.getEstado();
 	}
 
 	public String getNome() {

@@ -28,6 +28,7 @@ public class ClienteApi {
 	ClienteDto cliente = new ClienteDto();
 	
 
+	@GetMapping("lista")
 	public 	List<ClienteDto> listarClientes() {
 		List<ClienteDto> clientes = clienteService.listarClientes();
 		 		

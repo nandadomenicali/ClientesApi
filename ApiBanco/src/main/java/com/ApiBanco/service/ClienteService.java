@@ -22,8 +22,9 @@ public class ClienteService {
 	
 	public List<ClienteDto> listarClientes() {
 		List<Cliente> cadastro = clienteRepository.findAll();
-
+		
 		return ClienteDto.converter(cadastro);
+
 	}
 	
 
